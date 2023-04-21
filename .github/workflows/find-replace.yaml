@@ -1,0 +1,15 @@
+name: Find and replace
+
+on: 
+  pull-request:
+    branches:
+      - 'lokalise/**'
+jobs: 
+  find-replace:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: mad9000/actions-find-and-replace-string@3
+      with:
+        source:
+        find: ''v'    
+        replace: '\'v'
